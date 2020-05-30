@@ -8,7 +8,7 @@ console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
 
 const app = express()  // store our application 
-const port = peocess.env.PORT || 3000;  // for heroku port
+const port = process.env.PORT || 3000;  // for heroku port
 
 const publicDirPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
