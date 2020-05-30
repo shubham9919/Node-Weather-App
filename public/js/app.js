@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit',(e)=>{
     messageTwo.textContent = ''
 
     console.log(location)
-    fetch('http://localhost:3000/weather?address='+ location).then((response)=>{   //.then here will execute backkend
+    fetch('/weather?address='+ location).then((response)=>{   //.then here will execute backkend
     response.json(response).then((data)=>{
         console.log('data is',JSON.stringify(data))    
         if(data.error){

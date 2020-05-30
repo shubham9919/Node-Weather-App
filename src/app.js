@@ -8,6 +8,7 @@ console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
 
 const app = express()  // store our application 
+const port = peocess.env.PORT || 3000;  // for heroku port
 
 const publicDirPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
@@ -95,6 +96,6 @@ app.get('*', (req, res)=>{
     res.send('My 404 page')
 })
 
-app.listen(3000,()=>{
-    console.log('server is up on port 3000') //msg not displayed on browser 
+app.listen(port,()=>{
+    console.log('server is up on port ' +port) //msg not displayed on browser 
 }) 
